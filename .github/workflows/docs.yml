@@ -45,10 +45,10 @@ jobs:
       run: |
         poetry run pdoc huspacy/huspacy/huspacy -o site/docs --template-dir pdoc-template --force
 
-    - name: Linking readmes and changelogs
+    - name: Copying readmes and changelogs
       run: |
-        chmod +x ./linking.sh
-        ./linking.sh
+        chmod +x ./copying.sh
+        ./copying.sh
 
     - name: Install Node dependencies
       run: npm ci
