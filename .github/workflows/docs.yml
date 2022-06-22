@@ -43,7 +43,7 @@ jobs:
 
     - name: Generate docs
       run: |
-        poetry run pdoc huspacy/huspacy -o site/docs --force
+        poetry run pdoc huspacy/huspacy/huspacy -o site/docs --template-dir pdoc-template --force
 
     - name: Linking readmes and changelogs
       run: |
