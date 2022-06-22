@@ -1,7 +1,9 @@
 name: Docs
 
 on: 
-  push
+  push:
+    branches:
+      - main
   schedule:
     - cron: '0 8 * * 7'
 
