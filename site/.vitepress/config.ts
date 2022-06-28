@@ -40,6 +40,15 @@ function sidebarGuide() {
         { text: 'License', link: '/guide/license' },
         { text: 'Contact', link: '/guide/contact' },
       ]
+    },
+    {
+      text: 'Examples',
+      collapsable: false,
+      items: [
+        { text: 'Keyphrase Extraction', link: '/guide/examples/keyphrase' },
+        { text: 'Text Anonymizer', link: '/guide/examples/anonymizer' },
+        { text: 'Relation Extraction', link: '/guide/examples/relation' },
+      ]
     }
   ]
 }
