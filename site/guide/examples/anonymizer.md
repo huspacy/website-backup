@@ -1,12 +1,13 @@
 # Text Anonymization
 
-Using Presidio[¹] and Faker[²], we can make a simple Text Anonymization tool. spaCy integration can be used to identify and remove personal data, such as names, locations, phone numbers, or even bank details, based on Named Entity Recognition or simple rules. We can also apply de-identification with Faker, and with a few lines, we can make a simple PII (Personally Identifiable Information) removal tool.
+Using Presidio[¹] and Faker[²], we can easily make a simple text anonymization tool or PII (Personally Identifiable Information) removal tool. The (hu)spaCy integration of Presidio can be used to identify and remove personal data, such as names, locations, phone numbers, or even bank details. This tool uses (hu)spaCy's Named Entity Recognition facilities and further pattern matching rules. What is more, an easy-to-use de-identification method is provided by Faker as we show below.
 
-## Using Presidio Analyzer with HuSpaCy
+## Initializing Presidio with HuSpaCy
 
 ### Option 1: using only model names
 
 ```python
+// Here we use the hu_core_news_lg model, but any model supporting NER is a valid option
 configuration = {
     "nlp_engine_name": "spacy",
     "models": [{"lang_code": "hu", "model_name": "hu_core_news_lg", }],
@@ -19,7 +20,7 @@ analyzer = AnalyzerEngine(nlp_engine=nlp_engine,
                             supported_languages=["hu"],)
 ```
 
-### Option 2: predefined `nlp`
+### Option 2: Building on a previously initialized `nlp` 
 
 ```python
 class HuSpaCyNlpEngine(SpacyNlpEngine):
@@ -35,7 +36,7 @@ def process():
     analyzer = AnalyzerEngine(nlp_engine=nlp_engine, supported_languages=["hu"])
 ```
 
-## Making Faker operators
+## Configuring Faker operators
 
 ```python
 fake = Faker(locale=["hu_HU"])
@@ -54,14 +55,14 @@ fake_operators = {
 }
 ```
 
-## Using Presidio Anonymizer with Faker
+## Applying Presidio's anonymizer with Faker
 
 ```python
 anonymizer = AnonymizerEngine()
 anonymized_text = anonymizer.anonymize(text=text, analyzer_results=results, operators=fake_operators)
 ```
 
-This example is available on [Hugging Face Spaces](https://huggingface.co/spaces/huspacy/example-applications). The full source code is on [GitHub](https://github.com/huspacy/example-applications/blob/main/examples/anon.py).
+This example is available on [Hugging Face Spaces](https://huggingface.co/spaces/huspacy/example-applications), while the full source code is on [GitHub](https://github.com/huspacy/example-applications/blob/main/examples/anon.py).
 
 [¹]: https://github.com/microsoft/presidio
 [²]: https://github.com/joke2k/faker
