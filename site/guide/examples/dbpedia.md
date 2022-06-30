@@ -1,6 +1,6 @@
 # DBpedia Spotlight
 
-Using the DBpedia Spotlight for SpaCy[¹], we can easily get the DBpedia entities from an input text.
+Using the DBpedia Spotlight integration for SpaCy[¹], we can easily extract and link DBpedia entities from any text.
 
 ## Initalizing DBpedia Spotlight
 
