@@ -48,6 +48,7 @@ function sidebarGuide() {
         { text: 'Keyphrase Extraction', link: '/guide/examples/keyphrase' },
         { text: 'Text Anonymizer', link: '/guide/examples/anonymizer' },
         { text: 'Relation Extraction', link: '/guide/examples/relation' },
+        { text: 'DBpedia Spotlight', link: '/guide/examples/dbpedia' },
       ]
     }
   ]
