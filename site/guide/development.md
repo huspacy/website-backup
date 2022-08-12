@@ -26,7 +26,7 @@ Each model has its own dependency structure managed by `poetry`. For details che
 │   ├── pyproject.toml -- Python project definition file
 │   ├── CHANGELOG.md   -- Model changelog
 │   └── README.md      -- Instructions on building a model from scratch
-├── hu_vectors         -- Spacy 3.x project files for building word vectors
+├── hu_vectors_web_lg  -- Spacy 3.x project files for building word vectors
 │   ├── configs        -- SpaCy pipeline configuration files
 │   ├── poetry.lock    -- Poetry lock file
 │   ├── poetry.toml    -- Poetry configs
