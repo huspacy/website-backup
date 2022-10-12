@@ -73,6 +73,15 @@ function sidebarDocs() {
       ]
     },
     {
+      text: 'Medium Model',
+      collapsable: false,
+      items: [
+        { text: 'Description', link: '/docs/md/' },
+        { text: 'Changelog', link: '/docs/md/changelog' },
+        { text: 'Download', link: 'https://huggingface.co/huspacy/hu_core_news_md' },
+      ]
+    },
+    {
       text: 'Transformer Model',
       collapsable: false,
       items: [
@@ -88,6 +97,15 @@ function sidebarDocs() {
         { text: 'Description', link: '/docs/lg_vectors/' },
         { text: 'Changelog', link: '/docs/lg_vectors/changelog' },
         { text: 'Download', link: 'https://huggingface.co/huspacy/hu_vectors_web_lg' },
+      ]
+    },
+    {
+      text: 'Medium Vectors',
+      collapsable: false,
+      items: [
+        { text: 'Description', link: '/docs/md_vectors/' },
+        { text: 'Changelog', link: '/docs/md_vectors/changelog' },
+        { text: 'Download', link: 'https://huggingface.co/huspacy/hu_vectors_web_md' },
       ]
     }
   ]
